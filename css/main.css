@@ -188,8 +188,9 @@ main#home h1 {
   text-decoration: none;
   transition: all 0.7s ease-in-out;
 }
-.menu .nav-link:hover {
-  color: #ee6f1a;
+.menu .nav-link .menu .nav-link:hover {
+  color: chartreuse;
+  transform: scale(1.25);
 }
 .about-info {
   display: grid;
@@ -336,6 +337,7 @@ main#home h1 {
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
+    background: url('../img/portrait_small.jpg');
     width: 150px;
     height: 150px;
   }
@@ -348,8 +350,15 @@ main#home h1 {
   }
 }
 @media screen and (max-width: 500px) {
-  main#home h1 {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
     margin-top: 10vh;
+  }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem;
   }
   .projects {
     grid-template-columns: 1fr;
